@@ -27,11 +27,29 @@ header nav a {
 /* translate branch */
 
 .div-en {
+    height: 40%;
     border-radius: 15px;
     border: #c024b0 solid 3px;
 }
 
+.div-en h4 {
+    color: #f761e8;
+}
+
 .div-en input {
     width: 80%;
-    height: 50%;
+    height: 30%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.div-t {
+    height: 40%;
+    border-radius:15px;
+    border: #c024b0 solid 3px;
+}
+
+.sep {
+    margin-top: 8%;
+    border: black solid 1px;
 }
