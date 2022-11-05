@@ -26,30 +26,30 @@ header nav a {
 
 /* translate branch */
 
-.div-en {
-    height: 40%;
-    border-radius: 15px;
-    border: #c024b0 solid 3px;
+article {
+    min-height: 90vh;
 }
 
-.div-en h4 {
-    color: #f761e8;
+article .col-6 {
+    height: 40vh;
 }
 
-.div-en input {
-    width: 80%;
+.en {
+    border-radius: 5px;
+    border: transparent;
+    font-size: x-large;
+}
+
+.es {
+    border-radius: 5px;
+    border: transparent;
+    font-size: x-large;
+}
+
+.tools {
     height: 30%;
+}
+
+.tools .sep {
     margin: 0 auto;
-    text-align: center;
-}
-
-.div-t {
-    height: 40%;
-    border-radius:15px;
-    border: #c024b0 solid 3px;
-}
-
-.sep {
-    margin-top: 8%;
-    border: black solid 1px;
 }
