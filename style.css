@@ -63,3 +63,13 @@ article .col-6 {
 .tools .sep {
     margin: 0 auto;
 }
+
+/* change branch */
+
+.change {
+    width: 5%;
+}
+
+.change:hover {
+    cursor: pointer;
+}
