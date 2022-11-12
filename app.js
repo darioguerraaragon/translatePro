@@ -14,6 +14,8 @@ let en_title = d.querySelector(".en_title")
 let espanol = "es"
 let ingles = "en"
 
+let lang = "es-ES"
+
 change.addEventListener("click" , (e)=>{
 	if(es_title.textContent === "Spanish"){
 		es_title.textContent = "English"
@@ -21,15 +23,33 @@ change.addEventListener("click" , (e)=>{
 
 		espanol = "en"
 		ingles = "es"
+		lang = "es-ES"
 	}else{
 		es_title.textContent = "Spanish"
 		en_title.textContent = "English"
 
 		espanol = "es"
 		ingles = "en"
+		lang = "en-EN"
 	}
 	
 }) 
+// 
+
+// speaker-branch ...=>
+// variables
+const speaker_en = d.querySelector(".speaker-en")
+
+speaker_en.addEventListener("click" , e =>{
+	const synth = window.speechSynthesis
+	const utterThis = new SpeechSynthesisUtterance(en_text.textContent)
+	utterThis.rate = 0.3
+	
+	utterThis.lang = lang
+	synth.speak(utterThis)
+})
+
+// 
 
 en.addEventListener("keyup" , e =>{
 
