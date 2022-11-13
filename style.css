@@ -73,3 +73,29 @@ article .col-6 {
 .change:hover {
     cursor: pointer;
 }
+
+/* responsive-branch */
+
+@media(max-width:800px){
+    .spa {
+        width: 100%;
+        min-height: 40vh;
+    }
+
+    .imgs{
+        min-height: 50%;
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .imgs img {
+        width: 25px;
+        margin: 0 auto;
+    }
+
+    .change {
+        width: 50px;
+    }
+}
