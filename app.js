@@ -51,6 +51,59 @@ speaker_en.addEventListener("click" , e =>{
 
 // 
 
+// copy-branch =>
+// variables
+const btnCopy = d.querySelector("#copy")
+const btnCopy2 = d.querySelector("#copy2")
+const copied = d.querySelector("#copied")
+const copied2 = d.querySelector("#copied2")
+
+btnCopy.addEventListener("click" , e =>{
+	// console.log(navigator.clipboard)
+	let content = en_text.textContent
+
+	// evento para el input en ingles
+	navigator.clipboard.writeText(content)
+		.then(() =>{
+			console.log("text copied !")
+			copied.classList.remove("d-none")
+
+			const copy = () => {
+				copied.classList.add("d-none")
+			}
+
+			setTimeout(copy , 3000)
+		})
+
+		.catch((err)=>{
+			console.log("something went wrong")
+		})
+
+})
+
+// evento para el input en espanol
+btnCopy2.addEventListener("click" , e =>{
+	let content2 = es.textContent
+
+	navigator.clipboard.writeText(content2)
+		.then(()=>{
+			console.log("text copied !")
+			copied2.classList.remove("d-none")
+
+			const copy = () => {
+				copied2.classList.add("d-none")
+			}
+
+			setTimeout(copy , 3000)
+		})
+
+		.catch((err)=>{
+			console.log("something went wrong")
+		})
+})
+
+// 
+
 en.addEventListener("keyup" , e =>{
 
 	console.log(espanol)
@@ -70,7 +123,7 @@ en.addEventListener("keyup" , e =>{
 	   fetch('https://deep-translate1.p.rapidapi.com/language/translate/v2', options)
 		.then(response => response.json())
 		.then(response => {
-			console.log(response)
+			// console.log(response)
 			console.log(espanol)
 	  
 			arr = {...response}
